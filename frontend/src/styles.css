@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+h1{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Edit User</h1>
+<div mat-dialog-content>
+  <form [formGroup]="signupForm">
+      <mat-label>First Name</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="fname">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lname">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput type="text" formControlName="address">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>CGPA</mat-label>
+      <input matInput type="number" formControlName="CGPA">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSubmit()">Update</button>
+</div>

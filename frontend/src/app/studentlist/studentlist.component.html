@@ -1,0 +1,26 @@
+<h2>students</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Password</th>
+      <th>CGPA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let st of students">
+      <td>{{st.fname }}</td>
+      <td>{{ st.lname }}</td>
+      <td>{{ st.email }}</td>
+      <td>{{ st.address }}</td>
+      <td>{{ st.CGPA }}</td>
+      <td>
+        <button class="btn btn-warning" (click)="editst(st)">Edit</button>
+        <button class="btn btn-danger" (click)="deletest(st._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

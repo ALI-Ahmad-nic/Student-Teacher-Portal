@@ -1,0 +1,50 @@
+<h1>Add Student</h1>
+<form [formGroup]="signupForm" (ngSubmit)="stfun()">
+   
+
+    <div class="form-group col-md-6">
+        <input class="form-control" id="fname" formControlName="fname" placeholder="first name">
+        <div *ngIf="signupForm.controls['fname'].touched && signupForm.controls['fname'].invalid">
+            <p class="validationmessage" *ngIf="signupForm.controls['fname'].errors?.['required']">First Name is
+                required.</p>
+            <p class="validationmessage" *ngIf="signupForm.controls['fname'].errors?.['pattern']">Number not allowed.
+            </p>
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" id="lname" formControlName="lname" placeholder="last name">
+        <div *ngIf="signupForm.controls['lname'].touched && signupForm.controls['lname'].invalid">
+            <p class="validationmessage" *ngIf="signupForm.controls['lname'].errors?.['required']">First Name is
+                required.</p>
+            <p class="validationmessage" *ngIf="signupForm.controls['lname'].errors?.['pattern']">Number not allowed.
+            </p>
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" id="email" formControlName="email" placeholder="last name">
+        <div *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].invalid">
+            <p class="validationmessage" *ngIf="signupForm.controls['email'].errors?.['required']">email Name is
+                required.</p>
+            <p class="validationmessage" *ngIf="signupForm.controls['email'].errors?.['email']">email is not valid.
+            </p>
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" id="address" formControlName="address" placeholder="Address">
+        <div *ngIf="signupForm.controls['address'].touched && signupForm.controls['address'].invalid">
+            <p class="validationmessage" *ngIf="signupForm.controls['address'].errors?.['required']">Address  is
+                required.</p>
+            
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" id="cgpa" type="number" formControlName="CGPA" placeholder="cgpa">
+        <div *ngIf="signupForm.controls['CGPA'].touched && signupForm.controls['CGPA'].invalid">
+            <p class="validationmessage" *ngIf="signupForm.controls['CGPA'].errors?.['required']">CGPA is
+                required.</p>
+          
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">post here</button>
+    <p>{{message}}</p>
+</form>
